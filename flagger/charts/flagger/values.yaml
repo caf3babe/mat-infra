@@ -1,0 +1,6 @@
+flagger:
+  meshProvider: contour
+  ingressClass: contour
+  prometheus:
+    install: false
+  metricsServer: kube-prometheus-stack-prometheus.default:9090
