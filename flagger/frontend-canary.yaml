@@ -10,10 +10,10 @@ spec:
     kind: Deployment
     name: car-rental-frontend
   # HPA reference
-  autoscalerRef:
-    apiVersion: autoscaling/v2beta2
-    kind: HorizontalPodAutoscaler
-    name: car-rental-frontend
+  # autoscalerRef:
+  #   apiVersion: autoscaling/v2beta2
+  #   kind: HorizontalPodAutoscaler
+  #   name: car-rental-frontend
   service:
     # service port
     port: 80
