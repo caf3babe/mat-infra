@@ -31,3 +31,15 @@ data:
   .dockerconfigjson: eyJhdXRocyI6eyJnaGNyLmlvIjp7ImF1dGgiOiJZMkZtTTJKaFltVTZaMmh3WDJaWGREQlBSVlpxYlhoRFMyWmhVazFRTlcxQk9FMU9aRmRZV1dORU16SnVSRUpxUmc9PSJ9fX0=
 EOL
 
+
+# Azure Terraform
+
+```bash
+terraform apply 
+terraform output -raw kube_config > prod_kube.config
+```
+
+# start, stop aks cluster
+az aks stop --name aks-prod -g mat-project-2110838008-prod
+az aks start --name aks-prod -g mat-project-2110838008-prod
+```
