@@ -31,7 +31,11 @@ Temporary Items
 *.rar
 Chart.lock
 *.tgz
-.DS_Store
-.vagrant
-.terraform
-.terraform.lock.hcl
+**/.DS_Store
+**/.vagrant
+**/.terraform
+**/.terraform.lock.hcl
+**/*kube.conf
+**/*client.crt
+**/CRED
+**/terraform.tfstate*

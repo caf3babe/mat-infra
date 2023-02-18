@@ -1,5 +1,0 @@
-contour:
-  envoy:
-    service:
-      annotations:
-        service.beta.kubernetes.io/azure-dns-label-name: mat-app-flagger-prod
