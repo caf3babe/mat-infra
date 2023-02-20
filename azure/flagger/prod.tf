@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "rg_flagger" {
   location = "West Europe"
 }
 
-resource "azurerm_network_watcher" "nw_watcher" {
+resource "azurerm_network_watcher" "nw_watcher_flagger" {
   name                = join("-", [local.project_name, "nwwatcher"])
   location            = azurerm_resource_group.rg_flagger.location
   resource_group_name = azurerm_resource_group.rg_flagger.name
@@ -23,7 +23,7 @@ resource "azurerm_kubernetes_cluster" "aks_flagger" {
 
   default_node_pool {
     name       = "default"
-    node_count = 3
+    node_count = 2
     vm_size    = "Standard_D11_v2"
   }
 
@@ -43,5 +43,5 @@ resource "local_sensitive_file" "client_certificate" {
 
 resource "local_sensitive_file" "kube_config" {
   content     = azurerm_kubernetes_cluster.aks_flagger.kube_config_raw
-  filename = "${path.module}/../${local.project_name}-${local.cluster_name}kube.conf"
+  filename = "${path.module}/../${local.project_name}-${local.cluster_name}-kube.conf"
 }
