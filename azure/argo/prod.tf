@@ -23,7 +23,7 @@ resource "azurerm_kubernetes_cluster" "aks_argo" {
 
   default_node_pool {
     name       = "default"
-    node_count = 3
+    node_count = 4
     vm_size    = "Standard_D11_v2"
   }
 
