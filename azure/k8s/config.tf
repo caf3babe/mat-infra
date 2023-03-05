@@ -15,4 +15,3 @@ provider "azurerm" {
   features {}
 }
 
-# Your code goes here

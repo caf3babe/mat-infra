@@ -1,0 +1,329 @@
+clouddriver:
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  clouddriver.yml:
+    requiredFiles:
+    - /home/spinnaker/.hal/default/staging/dependencies/2054179555-config
+    decryptedFiles: {}
+    env: {}
+    name: clouddriver.yml
+    version: 5.78.3
+    outputFile: /opt/spinnaker/config/clouddriver.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+redis: {}
+echo:
+  echo.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: echo.yml
+    version: 2.36.1
+    outputFile: /opt/spinnaker/config/echo.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+rosco:
+  rosco/packer/aws-ebs.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/aws-ebs.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/aws-ebs.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco.yml
+    version: 1.12.2
+    outputFile: /opt/spinnaker/config/rosco.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/aws-chroot.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/aws-chroot.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/aws-chroot.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/scripts/windows-install-packages.ps1:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/scripts/windows-install-packages.ps1
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/scripts/windows-install-packages.ps1
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/azure-windows-2012-r2.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/azure-windows-2012-r2.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/azure-windows-2012-r2.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/huaweicloud.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/huaweicloud.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/huaweicloud.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/scripts/aws-windows-2012-configure-ec2service.ps1:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/scripts/aws-windows-2012-configure-ec2service.ps1
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/scripts/aws-windows-2012-configure-ec2service.ps1
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/alicloud-multi.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/alicloud-multi.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/alicloud-multi.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/oci.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/oci.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/oci.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/azure-linux.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/azure-linux.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/azure-linux.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/aws-windows-2012-r2.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/aws-windows-2012-r2.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/aws-windows-2012-r2.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/alicloud.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/alicloud.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/alicloud.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/scripts/windows-configure-chocolatey.ps1:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/scripts/windows-configure-chocolatey.ps1
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/scripts/windows-configure-chocolatey.ps1
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/aws-multi-chroot.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/aws-multi-chroot.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/aws-multi-chroot.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/docker.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/docker.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/docker.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/scripts/aws-windows.userdata:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/scripts/aws-windows.userdata
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/scripts/aws-windows.userdata
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/install_packages.sh:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/install_packages.sh
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/install_packages.sh
+    executable: true
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/aws-multi-ebs.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/aws-multi-ebs.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/aws-multi-ebs.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  rosco/packer/gce.json:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: rosco/packer/gce.json
+    version: 1.12.2
+    outputFile: /opt/rosco/config/packer/gce.json
+    executable: false
+    user: spinnaker
+    group: spinnaker
+front50:
+  front50.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: front50.yml
+    version: 2.27.1
+    outputFile: /opt/spinnaker/config/front50.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+deck:
+  settings.js:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: settings.js
+    version: 3.12.1
+    outputFile: /opt/spinnaker/config/settings.js
+    executable: false
+    user: www-data
+    group: spinnaker
+gate:
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  gate.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: gate.yml
+    version: 6.57.1
+    outputFile: /opt/spinnaker/config/gate.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+orca:
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  orca/shutdown.sh:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: orca/shutdown.sh
+    version: 8.27.1
+    outputFile: /opt/spinnaker/scripts/shutdown.sh
+    executable: true
+    user: spinnaker
+    group: spinnaker
+  orca.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: orca.yml
+    version: 8.27.1
+    outputFile: /opt/spinnaker/config/orca.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
