@@ -1,3 +1,34 @@
+orca:
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  orca/shutdown.sh:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: orca/shutdown.sh
+    version: 8.27.1
+    outputFile: /opt/spinnaker/scripts/shutdown.sh
+    executable: true
+    user: spinnaker
+    group: spinnaker
+  orca.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: orca.yml
+    version: 8.27.1
+    outputFile: /opt/spinnaker/config/orca.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
 clouddriver:
   spinnaker.yml:
     requiredFiles: []
@@ -20,7 +51,6 @@ clouddriver:
     executable: false
     user: spinnaker
     group: spinnaker
-redis: {}
 echo:
   echo.yml:
     requiredFiles: []
@@ -29,6 +59,59 @@ echo:
     name: echo.yml
     version: 2.36.1
     outputFile: /opt/spinnaker/config/echo.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+deck:
+  settings.js:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: settings.js
+    version: 3.12.1
+    outputFile: /opt/spinnaker/config/settings.js
+    executable: false
+    user: www-data
+    group: spinnaker
+gate:
+  spinnaker.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: spinnaker.yml
+    version: null
+    outputFile: /opt/spinnaker/config/spinnaker.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+  gate.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: gate.yml
+    version: 6.57.1
+    outputFile: /opt/spinnaker/config/gate.yml
+    executable: false
+    user: spinnaker
+    group: spinnaker
+front50:
+  front50.yml:
+    requiredFiles: []
+    decryptedFiles: {}
+    env: {}
+    name: front50.yml
+    version: 2.27.1
+    outputFile: /opt/spinnaker/config/front50.yml
     executable: false
     user: spinnaker
     group: spinnaker
@@ -243,87 +326,4 @@ rosco:
     executable: false
     user: spinnaker
     group: spinnaker
-front50:
-  front50.yml:
-    requiredFiles: []
-    decryptedFiles: {}
-    env: {}
-    name: front50.yml
-    version: 2.27.1
-    outputFile: /opt/spinnaker/config/front50.yml
-    executable: false
-    user: spinnaker
-    group: spinnaker
-  spinnaker.yml:
-    requiredFiles: []
-    decryptedFiles: {}
-    env: {}
-    name: spinnaker.yml
-    version: null
-    outputFile: /opt/spinnaker/config/spinnaker.yml
-    executable: false
-    user: spinnaker
-    group: spinnaker
-deck:
-  settings.js:
-    requiredFiles: []
-    decryptedFiles: {}
-    env: {}
-    name: settings.js
-    version: 3.12.1
-    outputFile: /opt/spinnaker/config/settings.js
-    executable: false
-    user: www-data
-    group: spinnaker
-gate:
-  spinnaker.yml:
-    requiredFiles: []
-    decryptedFiles: {}
-    env: {}
-    name: spinnaker.yml
-    version: null
-    outputFile: /opt/spinnaker/config/spinnaker.yml
-    executable: false
-    user: spinnaker
-    group: spinnaker
-  gate.yml:
-    requiredFiles: []
-    decryptedFiles: {}
-    env: {}
-    name: gate.yml
-    version: 6.57.1
-    outputFile: /opt/spinnaker/config/gate.yml
-    executable: false
-    user: spinnaker
-    group: spinnaker
-orca:
-  spinnaker.yml:
-    requiredFiles: []
-    decryptedFiles: {}
-    env: {}
-    name: spinnaker.yml
-    version: null
-    outputFile: /opt/spinnaker/config/spinnaker.yml
-    executable: false
-    user: spinnaker
-    group: spinnaker
-  orca/shutdown.sh:
-    requiredFiles: []
-    decryptedFiles: {}
-    env: {}
-    name: orca/shutdown.sh
-    version: 8.27.1
-    outputFile: /opt/spinnaker/scripts/shutdown.sh
-    executable: true
-    user: spinnaker
-    group: spinnaker
-  orca.yml:
-    requiredFiles: []
-    decryptedFiles: {}
-    env: {}
-    name: orca.yml
-    version: 8.27.1
-    outputFile: /opt/spinnaker/config/orca.yml
-    executable: false
-    user: spinnaker
-    group: spinnaker
+redis: {}
