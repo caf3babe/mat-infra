@@ -134,8 +134,10 @@ artifacts:
     enabled: false
     accounts: []
   helm:
-    enabled: false
-    accounts: []
+    enabled: true
+    accounts:
+    - name: caf3babe-helm-repo
+      repository: https://raw.githubusercontent.com/caf3babe/caf3babe.github.io/master/charts
   s3:
     enabled: false
     accounts: []

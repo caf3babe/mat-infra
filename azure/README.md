@@ -25,8 +25,8 @@ docker pull us-docker.pkg.dev/spinnaker-community/docker/halyard:stable
  
 docker run -p 8084:8084 -p 9000:9000 \
 --name halyard --rm \
--v "$(pwd)/hal-config":"/home/spinnaker/.hal" \
--v "$(pwd)/../../azure/mat-project-2110838008-spinnaker-tooling-kube.conf":"/home/spinnaker/.kube/config" \
+-v "$(pwd)/azure/spinnaker/hal-config":"/home/spinnaker/.hal" \
+-v "$(pwd)/azure/mat-project-2110838008-spinnaker-tooling-kube.conf":"/home/spinnaker/.kube/config" \
 -it \
 us-docker.pkg.dev/spinnaker-community/docker/halyard:stable
 
