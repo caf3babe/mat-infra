@@ -1,13 +1,13 @@
 variable "project_name" {
-    default = "mat-project-2110838008"
+  default = "mat-project-2110838008"
 }
 
 variable "cluster_name" {
-    default = "cluster-prod"
+  default = "cluster-prod"
 }
 
 variable "node_count" {
-    default = 2
+  default = 2
 }
 
 resource "azurerm_resource_group" "rg_cluster_prod" {
@@ -44,11 +44,11 @@ resource "azurerm_kubernetes_cluster" "aks_cluster_prod" {
 }
 
 resource "local_sensitive_file" "client_certificate" {
-  content     = azurerm_kubernetes_cluster.aks_cluster_prod.kube_config.0.client_certificate
+  content  = azurerm_kubernetes_cluster.aks_cluster_prod.kube_config.0.client_certificate
   filename = "${path.root}/../kube_client.crt"
 }
 
 resource "local_sensitive_file" "kube_config" {
-  content     = azurerm_kubernetes_cluster.aks_cluster_prod.kube_config_raw
+  content  = azurerm_kubernetes_cluster.aks_cluster_prod.kube_config_raw
   filename = "${path.root}/../${var.project_name}-${var.cluster_name}-kube.conf"
 }
