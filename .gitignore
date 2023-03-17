@@ -39,3 +39,4 @@ Chart.lock
 **/*client.crt
 **/CRED
 **/terraform.tfstate*
+azure/spinnaker/.terraform.tfstate.lock.info
