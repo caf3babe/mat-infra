@@ -85,8 +85,9 @@ rm azure/spinnaker-secrets.yaml
 
 #### Port forward to use Spinnakers web UI
 ```bash
-kubectl port-forward -n spinnaker svc/spin-deck 9000:9000 > /dev/null &
-kubectl port-forward -n spinnaker svc/spin-gate 8084:8084 > /dev/null &
+kubectl port-forward svc/spin-deck 9000:9000 > /dev/null &
+kubectl port-forward svc/spin-gate 8084:8084 > /dev/null &
+
 kubectl port-forward -n monitoring svc/kube-prometheus-stack-grafana 8080:80 > /dev/null &
 ```
 

@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
+## This way of installing spinnaker leads to an issue where the kayenta config is kind of not functional and you cannot safe canary pipelines
+## instead another option will be used: https://github.com/OpsMx/spinnaker-helm
+
 set -euo pipefail
-terraform -chdir=azure/spinnaker apply -auto-approve
+
+if [[ -f /Applications/Docker.app ]]; then
+  open /Applications/Docker.app
+fi
+
+ 
 
 terraform -chdir=azure/spinnaker output -json | yq -P > azure/spinnaker-secrets.yaml
 
@@ -37,6 +45,9 @@ VAULT_NAME=$(yq -r '.vault_name.value' /home/spinnaker/spinnaker-secrets.yaml)
 STORAGE_ACCOUNT_NAME=$(yq -r '.storage_account_name.value' /home/spinnaker/spinnaker-secrets.yaml)
 STORAGE_ACCOUNT_KEY=$(yq -r '.storage_account_key.value' /home/spinnaker/spinnaker-secrets.yaml)
 
+# 1.29.3, 1.28.5, 1.27.4
+hal config version edit --version "1.28.5"
+
 hal config provider azure enable
 hal config provider azure account add my-azure-account --client-id "${APP_ID}" --tenant-id "${TENANT_ID}" --subscription-id "${SUBSCRIPTION_ID}" --default-key-vault "${VAULT_NAME}" --default-resource-group "${RESOURCE_GROUP}" --packer-resource-group "${RESOURCE_GROUP}" --app-key "${APP_KEY}"
 
@@ -46,13 +57,12 @@ hal config provider kubernetes account add my-k8s-account --context aks-spinnake
 hal config storage azs edit --storage-account-name "${STORAGE_ACCOUNT_NAME}" --storage-account-key "${STORAGE_ACCOUNT_KEY}"
 hal config storage edit --type azs
 
-hal config version edit --version "1.29.3"
 hal config deploy edit --type distributed --account-name my-k8s-account
 
 hal config canary enable
 hal config canary prometheus enable
-hal config canary edit --default-metrics-store prometheus
 hal config canary prometheus account add my-prometheus-account --base-url "http://kube-prometheus-stack-prometheus.monitoring:9090"
+hal config canary edit --default-metrics-store prometheus
 hal config canary edit --default-metrics-account my-prometheus-account
 hal config canary edit --default-storage-account "${STORAGE_ACCOUNT_NAME}"
 
